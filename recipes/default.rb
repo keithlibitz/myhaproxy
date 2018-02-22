@@ -4,7 +4,7 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-all_web_nodes = search('node','role:web_server')
+all_web_nodes = search('node', "role:web_server AND chef_environment:#{node.chef_environment}") 
 
 members = []
 
